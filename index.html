@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Built to Last, Inc. — dead.simple</title>
+  <meta name="description" content="Built to Last, Inc. is a consumer technology company building beautifully simple ways to live with the connected home. Maker of dead.simple." />
+
+  <!-- Open Graph / link previews -->
+  <meta property="og:title" content="Built to Last, Inc." />
+  <meta property="og:description" content="A consumer technology company. Restoring analog to humanity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://deadsimple.casa" />
+
+  <!-- Inline SVG favicon, no external files needed -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='none' stroke='%23e8e6e1' stroke-width='8'/><circle cx='50' cy='50' r='10' fill='%23e8e6e1'/></svg>" />
+
+  <style>
+    :root {
+      --bg: #0d0e10;
+      --ink: #e8e6e1;
+      --muted: #8a8d93;
+      --line: rgba(232, 230, 225, 0.12);
+      --accent: #e8e6e1;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      background:
+        radial-gradient(1100px 600px at 50% -10%, rgba(255,255,255,0.06), transparent 60%),
+        var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 56px 24px;
+    }
+
+    .mark { margin-bottom: 30px; }
+
+    .wordmark {
+      font-size: clamp(34px, 8vw, 62px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    /* The pulsing dot is the period in "dead.simple": inline, baseline-seated, no spaces. */
+    .mark .dot {
+      display: inline-block;
+      width: 0.19em;
+      height: 0.19em;
+      margin: 0 0.03em;
+      border-radius: 50%;
+      background: var(--accent);
+      vertical-align: baseline;
+      box-shadow: 0 0 0 0 rgba(232, 230, 225, 0.5);
+      animation: pulse 2.6s ease-out infinite;
+    }
+
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(232, 230, 225, 0.45); }
+      70%  { box-shadow: 0 0 0 14px rgba(232, 230, 225, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(232, 230, 225, 0); }
+    }
+
+    .tagline {
+      font-size: clamp(16px, 3.4vw, 21px);
+      color: var(--muted);
+      margin: 0 auto;
+    }
+
+    .about {
+      margin-top: 34px;
+      max-width: 46ch;
+      font-size: clamp(15px, 2.6vw, 17px);
+      line-height: 1.65;
+      color: var(--ink);
+      opacity: 0.9;
+    }
+
+    .contact {
+      margin-top: 26px;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact a:hover { border-color: var(--ink); }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    footer .legal { color: var(--ink); font-weight: 500; }
+    footer a { color: inherit; }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="mark">
+      <span class="wordmark">dead<span class="dot" aria-hidden="true"></span>simple</span>
+    </div>
+
+    <p class="tagline">Restoring analog to humanity.</p>
+
+    <p class="about">
+      Built to Last, Inc. is a consumer technology company. We design hardware and
+      software that make living with the connected home calmer, simpler, and more human.
+    </p>
+
+    <p class="contact">
+      Get in touch: <a href="mailto:hello@deadsimple.casa">hello@deadsimple.casa</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="legal">Built to Last, Inc.</div>
+    <div>3290 Northside Pkwy NW, Ste 925</div>
+    <div>Atlanta, GA 30327  ·  United States</div>
+    <div><a href="mailto:hello@deadsimple.casa">hello@deadsimple.casa</a></div>
+    <div>© <span id="year">2026</span> Built to Last, Inc. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
