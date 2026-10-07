@@ -1,175 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate" />
-  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
-  <title>Built to Last, Inc. — dead.simple</title>
-  <meta name="description" content="Built to Last, Inc. is a consumer technology company in Atlanta, Georgia, designing hardware and software for the connected home. Maker of dead.simple." />
-  <meta property="og:title" content="Built to Last, Inc." />
-  <meta property="og:description" content="Consumer technology for the connected home." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://deadsimple.casa" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='none' stroke='%23e8e6e1' stroke-width='8'/><circle cx='50' cy='50' r='10' fill='%23e8e6e1'/></svg>" />
-
-  <style>
-    :root {
-      --bg: #0d0e10; --panel: #131418; --ink: #e8e6e1; --muted: #8a8d93;
-      --line: rgba(232,230,225,0.12); --accent: #e8e6e1;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg); color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased; line-height: 1.6;
-    }
-    a { color: inherit; }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-
-    /* Top nav */
-    header.nav {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(13,14,16,0.82); backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .brand { display: inline-flex; align-items: baseline; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; text-decoration: none; }
-    .brand .dot {
-      display: inline-block; width: 0.19em; height: 0.19em; margin: 0 0.03em; border-radius: 50%;
-      background: var(--accent); vertical-align: baseline;
-      box-shadow: 0 0 0 0 rgba(232,230,225,0.5); animation: pulse 2.6s ease-out infinite;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(232,230,225,0.45); }
-      70% { box-shadow: 0 0 0 12px rgba(232,230,225,0); }
-      100% { box-shadow: 0 0 0 0 rgba(232,230,225,0); }
-    }
-    .nav nav a { margin-left: 26px; font-size: 15px; color: var(--muted); text-decoration: none; transition: color .2s; }
-    .nav nav a:hover { color: var(--ink); }
-
-    /* Hero */
-    .hero { padding: 96px 0 72px; text-align: center; border-bottom: 1px solid var(--line); }
-    .hero h1 { font-size: clamp(40px, 9vw, 76px); font-weight: 600; letter-spacing: -0.035em; }
-    .hero h1 .dot {
-      display: inline-block; width: 0.19em; height: 0.19em; margin: 0 0.03em; border-radius: 50%;
-      background: var(--accent); vertical-align: baseline;
-      box-shadow: 0 0 0 0 rgba(232,230,225,0.5); animation: pulse 2.6s ease-out infinite;
-    }
-    .hero p { margin-top: 18px; font-size: clamp(17px, 3vw, 21px); color: var(--muted); }
-
-    /* Sections */
-    section { padding: 64px 0; border-bottom: 1px solid var(--line); }
-    h2 { font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 22px; }
-    .lede { font-size: clamp(18px, 2.6vw, 22px); line-height: 1.55; }
-    .body p { font-size: 17px; color: #c9c8c2; margin-top: 16px; max-width: 64ch; }
-
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 8px; }
-    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
-    .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
-    .card p { font-size: 15px; color: var(--muted); line-height: 1.55; }
-
-    .contact-grid { display: flex; flex-wrap: wrap; gap: 40px; }
-    .contact-grid .col { min-width: 220px; }
-    .contact-grid .label { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-    .contact-grid a { text-decoration: none; border-bottom: 1px solid var(--line); }
-    .contact-grid a:hover { border-color: var(--ink); }
-    address { font-style: normal; color: #c9c8c2; }
-
-    footer { padding: 36px 0; color: var(--muted); font-size: 13.5px; }
-    footer .row { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; justify-content: space-between; }
-    footer .legal { color: var(--ink); font-weight: 500; }
-    footer a { text-decoration: none; border-bottom: 1px solid transparent; }
-    footer a:hover { border-color: var(--muted); }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<title>Coming soon</title>
+<style>
+  :root { --bg: #f7f7f5; --fg: #1c1c1c; --muted: #8a8a8a; --rule: #d9d9d6; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141414; --fg: #ededed; --muted: #7a7a7a; --rule: #2e2e2e; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { text-align: center; }
+  h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 500; letter-spacing: -0.01em; }
+  hr { width: 32px; border: 0; border-top: 1px solid var(--rule); margin: 28px auto; }
+  p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
+  a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  a:hover { border-bottom-color: var(--fg); }
+</style>
 </head>
-
 <body>
-  <header class="nav">
-    <div class="wrap">
-      <a class="brand" href="/">dead<span class="dot" aria-hidden="true"></span>simple</a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="/privacy.html">Privacy</a>
-      </nav>
-    </div>
-  </header>
-
-  <div class="hero">
-    <div class="wrap">
-      <h1>dead<span class="dot" aria-hidden="true"></span>simple</h1>
-      <p>Consumer technology for the connected home.</p>
-    </div>
-  </div>
-
   <main>
-    <section id="about">
-      <div class="wrap">
-        <h2>About</h2>
-        <p class="lede">Built to Last, Inc. is a consumer technology company headquartered in Atlanta, Georgia. We design and build hardware and software for the modern connected home.</p>
-        <div class="body">
-          <p>Our focus is simple: technology in the home should be calm, reliable, and genuinely easy to live with. We build products meant to be set up once and trusted for years — engineered for durability and a human-centered experience rather than novelty.</p>
-          <p>The company operates under the brand dead.simple. We're a small, independent team based in Atlanta, building deliberately and for the long term.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="approach">
-      <div class="wrap">
-        <h2>Our approach</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Simple by design</h3>
-            <p>Hardware and software that anyone can use without a manual. We remove steps until what's left just works.</p>
-          </div>
-          <div class="card">
-            <h3>Built to last</h3>
-            <p>Durable engineering and long-term support — products designed to be lived with for years, not replaced each season.</p>
-          </div>
-          <div class="card">
-            <h3>Private by default</h3>
-            <p>Your home is yours. We design for privacy and security from the first line of code, not as an afterthought.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <p class="lede">For general inquiries, partnerships, or press, we'd love to hear from you.</p>
-        <div class="contact-grid" style="margin-top:28px;">
-          <div class="col">
-            <div class="label">Email</div>
-            <a href="mailto:hello@deadsimple.casa">hello@deadsimple.casa</a>
-          </div>
-          <div class="col">
-            <div class="label">Office</div>
-            <address>
-              Built to Last, Inc.<br />
-              3290 Northside Pkwy NW, Ste 925<br />
-              Atlanta, GA 30327<br />
-              United States
-            </address>
-          </div>
-        </div>
-      </div>
-    </section>
+    <h1>Coming soon.</h1>
+    <hr>
+    <p>Inquiries<br><a href="mailto:founders@deadsimple.casa">founders@deadsimple.casa</a></p>
   </main>
-
-  <footer>
-    <div class="wrap row">
-      <span class="legal">© <span id="year">2026</span> Built to Last, Inc.</span>
-      <span>
-        <a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
-        <a href="/terms.html">Terms of Use</a> &nbsp;·&nbsp;
-        <a href="mailto:hello@deadsimple.casa">hello@deadsimple.casa</a>
-      </span>
-    </div>
-  </footer>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
